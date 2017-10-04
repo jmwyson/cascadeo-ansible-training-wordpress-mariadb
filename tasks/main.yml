@@ -1,5 +1,19 @@
 ---
 # tasks file for wordpress-mariadb
+- name: install epel-release
+  yum:
+    name: epel-release
+    state: latest
+
+- name: install pip
+  yum:
+    name: python-pip
+    state: latest
+
+- name: install mysql-python
+  pip:
+    name: mysql-python
+
 - name: create database
   mysql_db:
     name: "{{ db_name }}"
