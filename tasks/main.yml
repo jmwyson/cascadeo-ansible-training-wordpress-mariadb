@@ -11,6 +11,9 @@
     state: latest
 
 - name: install gcc which is required by mysql-python
+  yum:
+    name: gcc
+    state: latest
 
 - name: install pip
   yum:
