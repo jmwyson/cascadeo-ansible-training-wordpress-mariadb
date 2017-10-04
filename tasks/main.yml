@@ -5,10 +5,12 @@
     name: epel-release
     state: latest
 
-- name: install mysql_config which is inside MariaDB-devel
+- name: install mysql_config which is inside MariaDB-devel required by mysql-python
   yum:
     name: MariaDB-devel
     state: latest
+
+- name: install gcc which is required by mysql-python
 
 - name: install pip
   yum:
