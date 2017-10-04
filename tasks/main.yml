@@ -1,2 +1,13 @@
 ---
 # tasks file for wordpress-mariadb
+- name: create database
+  mysql_db:
+    name: "{{ db_name }}"
+    state: present
+
+- name: create database user
+  mysql_user:
+    name: "{{ db_user }}"
+    password: "{{ db_password }}"
+    state: present
+    priv: "{{ db_name }}.*:ALL"
