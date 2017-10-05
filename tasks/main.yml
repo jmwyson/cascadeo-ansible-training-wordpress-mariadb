@@ -50,3 +50,4 @@
     password: "{{ db_password }}"
     state: present
     priv: "{{ db_name }}.*:ALL"
+    host: "%"
