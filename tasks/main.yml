@@ -20,6 +20,16 @@
     name: python-devel
     state: latest
 
+- name: install openssl required by mysql-python
+  yum:
+    name: openssl
+    state: latest
+
+- name: install openssl-devel required by mysql-python
+  yum:
+    name: openssl-devel
+    state: latest
+
 - name: install pip
   yum:
     name: python-pip
